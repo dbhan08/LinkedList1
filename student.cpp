@@ -5,8 +5,11 @@
 using namespace std;
 
 Student::Student(char* first, char* last, int newId, float newgpa) {
-    firstName = first;
-    lastName = last;
+    strcpy(firstName,first);
+	strcpy(lastName,last);	
+    
+	
+
     Id = newId;
     gpa = newgpa;
     

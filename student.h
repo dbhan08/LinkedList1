@@ -17,8 +17,8 @@ public:
     float getGpa();
     ~Student();
 private:
-    char* firstName;
-    char* lastName;
+    char firstName[20]; 
+    char lastName[20];
     float gpa;
     int Id;
 };

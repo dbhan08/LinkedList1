@@ -23,7 +23,7 @@ Student* Node::getStudent() {
     return student;
 }
 
-Node* Node::getNode() {
+Node* Node::getNext() {
     return nextNode;
 }
 

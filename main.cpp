@@ -13,12 +13,12 @@ void add(char* first, char* last, int id, float gpa) {
         head->setStudent(newStudent);
         
     } else {
-        while(current->getNode() != NULL) {
-            current = current->getNode();
+        while(current->getNext() != NULL) {
+            current = current->getNext();
             
         }
         current->setNext(new Node());
-        current->getNode()->setStudent(newStudent);
+        current->getNext()->setStudent(newStudent);
     }
     
     
@@ -32,22 +32,22 @@ void print(Node* next) {
     if(next != NULL) {
         cout << next->getStudent()->getFirst() << " " << next->getStudent()->getLast() << "\t"<< next ->getStudent()->getId() << "\t" <<
         next ->getStudent()-> getGpa() << endl;
-        print(next->getNode());
+        print(next->getNext());
         
     }
 }
     int main() {
         bool running = true;
         char inp[20];
-        char* first;
-        first = new char[20];
-        char* last;
-        last = new char[20];
+        char first[20];
+        
+        char last[20];
+        
         int id;
         float gpa;
         
         while(running) {
-            
+           cout << "Enter what you would like to do" << endl; 
             cin.get(inp,20);
             cin.clear();
             cin.ignore();
@@ -70,7 +70,7 @@ void print(Node* next) {
                 cin.ignore();
                 add(first,last,id,gpa);
                 
-            } else if(strcmp(inp,"print")) {
+            } else if(strcmp(inp,"print") == 0) {
                 print(head);
                 
             }else if(strcmp(inp, "quit") == 0) {

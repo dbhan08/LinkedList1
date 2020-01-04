@@ -14,7 +14,7 @@ public:
     void setStudent(Student* newStudent);
     Student* getStudent();
     void setNext(Node* newNode);
-    Node* getNode();
+    Node* getNext();
 private:
     Student* student;
     Node* nextNode;
