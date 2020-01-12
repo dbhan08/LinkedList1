@@ -2,8 +2,9 @@
 #include <cstring>
 #include "Node.h"
 
-Node::Node() {
+Node::Node(Student* newStudent) {
     nextNode = NULL;
+    student = newStudent;
     
 }
 

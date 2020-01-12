@@ -9,7 +9,7 @@ void add(char* first, char* last, int id, float gpa) {
     Student* newStudent = new Student(first, last, id, gpa);
     Node* current = head;
     if(current == NULL) {
-        head = new Node();
+        head = new Node(newStudent);
         head->setStudent(newStudent);
         
     } else {
@@ -17,7 +17,7 @@ void add(char* first, char* last, int id, float gpa) {
             current = current->getNext();
             
         }
-        current->setNext(new Node());
+        current->setNext(new Node(newStudent));
         current->getNext()->setStudent(newStudent);
     }
     
